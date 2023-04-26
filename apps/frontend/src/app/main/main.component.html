@@ -1,0 +1,9 @@
+<div class="line" *ngFor="let div of squares; let i= index "  [style.left]="3*5*i+'px'" >
+  <div class="square" *ngFor="let div of squares[i]; let j= index "  [style.top]="3*5*j+'px'" [class.occupied]="squares[i][j]">
+    <span>{{i}}x{{j}}</span>
+  </div>
+</div>
+<div class="casier" *ngFor="let div of casiers" [style.width]="(3*5*div.width-2)+'px'" [style.height]="(3*5*div.height-2)+'px'" [style.top]="(3*5*div.y+1)+'px'" [style.left]="(3*5*div.x+1)+'px'">
+  <div class="label">{{5*div.width}}x{{5*div.height}}</div>
+  <!-- <div class="label">{{div.x}}x{{div.y}} {{div.width}}x{{div.height}}</div> -->
+</div>

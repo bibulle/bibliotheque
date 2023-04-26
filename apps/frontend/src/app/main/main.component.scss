@@ -1,0 +1,36 @@
+.casier {
+  position:absolute;
+
+  border-color: grey;
+  border-width: thin;
+  border-style: solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  position:absolute;
+  top: 0;
+  .square {
+    position:absolute;
+
+    width: 15px;
+    height: 15px;
+    border-color: lightgray;
+    border-width: thin;
+    border-style: solid;  
+
+    span {
+      display: none;
+    }
+  }
+  .square:hover span {
+    display: inherit;
+  }
+
+  .occupied {
+    background-color: lightgreen;
+  }
+}
